@@ -12,17 +12,17 @@ function jump() {
 }
 
 let isAlive = setInterval(function () {
-  // get current dino Y position
+  // ottiene la posizione Y corrente di dino
   let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
 
-  // get current cactus X position
+  // ottiene la posizione attuale del cactus X
   let cactusLeft = parseInt(
     window.getComputedStyle(cactus).getPropertyValue("left")
   );
 
-  // detect collision
+  // rileva la collisione
   if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
-    // collision
+    // collisione
     alert("Game Over!");
   }
 }, 10);
